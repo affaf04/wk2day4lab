@@ -67,18 +67,18 @@ change(100, 37);
 
 
 // 5.   Write a program that uses console.log to print all the numbers from 1 to 100 with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead. When you have that working, modify your program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
-
-let x = 1;
-while (x <= 100) {
-    if (x % 3 === 0 && x % 5 === 0) {
+function fizzBuzz(firstNum, lastNum) {
+    for (let x = firstNum; x <= lastNum; x++) {
+      if (x % 3 === 0 && x % 5 === 0) {
         console.log("FizzBuzz");
-    } else if (x % 3 === 0) {
+      } else if (x % 3 === 0) {
         console.log("Fizz");
-    } else if (x % 5 === 0) {
+      } else if (x % 5 === 0) {
         console.log("Buzz");
-    } else {
+      } else {
         console.log(x);
+      }
     }
-    x++;
-}
+  }
+fizzBuzz(1, 100);  
    
